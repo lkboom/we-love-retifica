@@ -1,0 +1,17 @@
+# Julia, Jales, Ramsés e Liah
+
+# Trabalho de PEOO
+CRUD com ao menos 2 classes
+Tema: Retífica
+
+# Funções
+## Julia
+Arquivo model.py
+Criação de classes e armazenamento de suas informações em listas
+
+## Jales e Liah
+Código principal
+CRUD, funções e exibição de texto
+
+## Ramsés
+INterface gráfica e .json (opcional)
