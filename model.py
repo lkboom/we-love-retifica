@@ -1,28 +1,19 @@
 class Cliente:
-    def __init__(self, nome, telefone, cpf, city, tipo_servico):
+    def __init__(self, nome, telefone, cpf, city):
         self.nome = nome
         self.telefone = telefone
         self.cpf = cpf
         self.cidade = city
-        self.tipo_servico = tipo_servico
-
-    def exibir_dados(self):
-        print("DADOS DO CLIENTE")
-        print(f"Nome: {self.nome}")
-        print(f"Telefone: {self.telefone}")
-        print(f"CPF: {self.cpf}")
-        print(f"Cidade: {self.cidade}")
-        print(f"Serviço solicitado: {self.tipo_servico}")
 
 class Motor:
-    def __init__(self, modelo, ano, cilindrada):
+    def __init__(self, modelo, ano, cilindrada, tipo_servico):
         self.modelo = modelo
         self.ano = ano
         self.cilindrada = cilindrada
-
-    def exibir_dados(self):
-        print("DADOS DO MOTOR")
-        print(f"Modelo: {self.modelo}")
-        print(f"Ano: {self.ano}")
-        print(f"Cilindrada: {self.cilindrada}")
-     
+        self.tipo_servico = tipo_servico
+        
+        
+class Retifica:
+    def __init__(self, nome = 'RETPARTS'):
+        self.clientes = []
+        self.motores = []
