@@ -1,24 +1,32 @@
-# IMPORTANDO AS DUAS CLASSES DE UM ÚNICO ARQUIVO
-from model import Cliente, Motor
-# IMPORTANDO FUNÇÕES
-import func.py
+# main.py
 
-def main():
+from model import Retifica, Sistema
 
-    while True:
-        print("SISTEMA RETÍFICA")
-        print("1. Cadastrar Cliente")
-        print("2. Cadastrar Motor")
-        print("3. Remover Cliente")
-        print("4. Remover Cliente")
-        print("5. Visualizar Relatório de Clientes")
-        print("6. Visualizar Relatório de Serviços")
-        print("7. Sair")
-        
-        opcao = input("Escolha uma opção (1-4): ")
+retifica = Retifica(nome='RETPARTS')
+sistema  = Sistema(retifica)
 
-        if opcao == "1":
-            print("NOVO CADASTRO DE CLIENTE")
-           
+while True:
+    print("\n=== RETPARTS ===")
+    print("1 - Cadastrar cliente")
+    print("2 - Listar clientes")
+    print("3 - Listar motores")
+    print("4 - Listar cabeçotes")
+    print("0 - Sair")
+
+    opcao = input("\nEscolha uma opção: ")
+
+    if opcao == '1':
+        sistema.cad_cliente()
+    elif opcao == '2':
+        sistema.listar_clientes()
+    elif opcao == '3':
+        sistema.listar_motores()
+    elif opcao == '4':
+        sistema.listar_cabecotes()
+    elif opcao == '0':
+        print("Encerrando o sistema...")
+        break
+    else:
+        print("Opção inválida, tente novamente.")
 
     
