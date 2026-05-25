@@ -13,21 +13,23 @@ class Cliente:
         self.tipo_servico = tipo_servico
 
 
-class Motor:
-    def __init__(self, modelo, ano, cilindrada, tipo_servico):
+class Conserto:
+    def __init__(self, modelo, ano, servico):
         self.modelo = modelo
         self.ano = ano
+        self.servico = servico
+
+class Motor(Conserto):
+    def __init__(self, modelo, ano, servico, cilindrada ):
+        super().__init__(modelo, ano, servico)
         self.cilindrada = cilindrada
-        self.tipo_servico = tipo_servico
 
 
-class Cabecote:
-    def __init__(self, tipo, combustivel, ponto_zero, ano, servico):
-        self.tipo = tipo
+class Cabecote(Conserto):
+    def __init__(self, modelo, ano, servico,combustivel, ponto_zero):
+        super().__init__(modelo, ano, servico)
         self.combustivel = combustivel
         self.ponto_zero = ponto_zero
-        self.ano = ano
-        self.servico = servico
 
 
 class Retifica:
